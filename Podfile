@@ -16,4 +16,12 @@ target 'massenger' do
     # Pods for testing
   end
 
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'SDWebImage'
+
+
+
+ 
 end

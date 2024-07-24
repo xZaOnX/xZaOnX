@@ -1,3 +1,42 @@
-PODFILE CHECKSUM: bb700d688bc9a7043b61c51ed286566aa9308fd5
+PODS:
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
+  - JGProgressHUD (2.2)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
+  - Realm (10.52.2):
+    - Realm/Headers (= 10.52.2)
+  - Realm/Headers (10.52.2)
+  - RealmSwift (10.52.2):
+    - Realm (= 10.52.2)
+  - SDWebImage (5.19.4):
+    - SDWebImage/Core (= 5.19.4)
+  - SDWebImage/Core (5.19.4)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - MessageKit
+  - RealmSwift
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - InputBarAccessoryView
+    - JGProgressHUD
+    - MessageKit
+    - Realm
+    - RealmSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
+  Realm: e44eb7d20fe469fe1179894fd356727b8fbe61c2
+  RealmSwift: 7aacbd3101158f7d54c930bcfcfaafadbd376ffc
+  SDWebImage: 066c47b573f408f18caa467d71deace7c0f8280d
+
+PODFILE CHECKSUM: c9effdb35f1d05678999ceafa37870409e94dbcc
 
 COCOAPODS: 1.15.2

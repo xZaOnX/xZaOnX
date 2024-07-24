@@ -271,6 +271,7 @@
 				A844D0E12C4E736C007DDB0A /* Sources */,
 				A844D0E22C4E736C007DDB0A /* Frameworks */,
 				A844D0E32C4E736C007DDB0A /* Resources */,
+				EE19BDD9A49DD13B25156ECA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +316,7 @@
 				A844D1012C4E736E007DDB0A /* Sources */,
 				A844D1022C4E736E007DDB0A /* Frameworks */,
 				A844D1032C4E736E007DDB0A /* Resources */,
+				308D6F9277999CE5654F7211 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,6 +403,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		308D6F9277999CE5654F7211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-massenger-massengerUITests/Pods-massenger-massengerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-massenger-massengerUITests/Pods-massenger-massengerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-massenger-massengerUITests/Pods-massenger-massengerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7AC39AA0C79FC52C3362C2CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +484,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE19BDD9A49DD13B25156ECA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-massenger/Pods-massenger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-massenger/Pods-massenger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-massenger/Pods-massenger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
