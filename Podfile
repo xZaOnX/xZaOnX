@@ -21,7 +21,5 @@ pod 'JGProgressHUD'
 pod 'RealmSwift'
 pod 'SDWebImage'
 
-
-
  
 end
