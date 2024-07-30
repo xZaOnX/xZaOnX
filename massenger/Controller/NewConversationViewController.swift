@@ -9,31 +9,27 @@ import UIKit
 import JGProgressHUD
 
 
-    //söflsdöflösdlfösdlfösdlöf
-
-
 class NewConversationViewController: UIViewController {
     
      private let spinner = JGProgressHUD()
  
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "search for users..."
+        searchBar.placeholder = "Search For Users..."
         return searchBar
     }()
     
     private let tableView: UITableView = {
        let table = UITableView()
         table.isHidden = true
-        table.register(UITableView.self,
-                       gitforCellReuseIdentifier: "cell")
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
     
     
     private let noResultsLabel : UILabel = {
         let label = UILabel()
-        label.text = " no result"
+        label.text = "No result"
         label.isHidden = true
         label.textAlignment = .center
         label.textColor = .green
@@ -48,10 +44,11 @@ class NewConversationViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.titleView = searchBar
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel",
-                                                            style: .done,
+                                                            style: .plain,
                                                             target: self,
                                                             action: #selector(dismissSelf))
         
+        searchBar.becomeFirstResponder()
     }
     @objc private func dismissSelf(){
         dismiss(animated: true,completion: nil)

@@ -33,6 +33,7 @@
 		A844D12C2C4E81B7007DDB0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844D12B2C4E81B7007DDB0A /* Extensions.swift */; };
 		A87A560F2C5136EE00D213D2 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A87A560E2C5136EE00D213D2 /* JGProgressHUD */; };
 		A87A56112C5247F200D213D2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87A56102C5247F200D213D2 /* ChatViewController.swift */; };
+		A87A56132C57BA6500D213D2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87A56122C57BA6500D213D2 /* StorageManager.swift */; };
 		F18E42A3DC0AA70C3CE49B91 /* Pods_massenger_massengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046FA88A15F77DDF3ABF3764 /* Pods_massenger_massengerUITests.framework */; };
 		F94D5DC889E66FF647717F7A /* Pods_massengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F0821DE8B27326465AA145 /* Pods_massengerTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		A844D1282C4E766F007DDB0A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A844D12B2C4E81B7007DDB0A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A87A56102C5247F200D213D2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A87A56122C57BA6500D213D2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B1F0821DE8B27326465AA145 /* Pods_massengerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_massengerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD34E1FC05596437DBC08A82 /* Pods-massenger-massengerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-massenger-massengerUITests.release.xcconfig"; path = "Target Support Files/Pods-massenger-massengerUITests/Pods-massenger-massengerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7D41F86F10E115D0975956E /* Pods-massengerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-massengerTests.release.xcconfig"; path = "Target Support Files/Pods-massengerTests/Pods-massengerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				A844D0EA2C4E736C007DDB0A /* SceneDelegate.swift */,
 				A844D12B2C4E81B7007DDB0A /* Extensions.swift */,
 				A832E3792C4FDF320012B2A5 /* DatabaseManager.swift */,
+				A87A56122C57BA6500D213D2 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				A844D0EB2C4E736C007DDB0A /* SceneDelegate.swift in Sources */,
 				A87A56112C5247F200D213D2 /* ChatViewController.swift in Sources */,
 				A844D1232C4E7625007DDB0A /* PhotoViewerViewController.swift in Sources */,
+				A87A56132C57BA6500D213D2 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

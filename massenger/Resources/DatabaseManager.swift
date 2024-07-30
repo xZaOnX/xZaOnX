@@ -27,13 +27,20 @@ extension DatabaseManager{
         
     }
     
-    public func insertUser(with user: ChatAppUser){
+    public func insertUser(with user: ChatAppUser, completion : @escaping(Bool) -> Void){
         if user1 != nil {
-            database.child("users").child(user1?.uid ?? "anan").setValue([
+            database.child("users").child(user1?.uid ?? "idler").setValue([
                 "email_adress" : user.emailAdress,
-            "first_name" : user.firstName,
-            "last_name" : user.lastName
-        ])
+                "first_name" : user.firstName,
+                "last_name" : user.lastName
+            ],withCompletionBlock: { error, _ in
+                guard error == nil else {
+                    print("failed to write to database")
+                    completion(false)
+                    return
+                }
+                completion(true)
+            })
         }
     }
     

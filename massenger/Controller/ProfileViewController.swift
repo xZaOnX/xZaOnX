@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     let data = ["Log out"]
     
     override func viewDidLoad() {
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemBackground
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
