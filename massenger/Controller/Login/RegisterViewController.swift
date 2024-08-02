@@ -190,18 +190,18 @@ presentPhotoActionSheet()
         passwordField.resignFirstResponder()
         firstNameField.resignFirstResponder()
         lastNameField.resignFirstResponder()
-
         
         
-        guard let email = emailField.text, 
-                let firstName = firstNameField.text,
+        
+        guard let email = emailField.text,
+              let firstName = firstNameField.text,
               let lastName = lastNameField.text,
-                let password = passwordField.text,
+              let password = passwordField.text,
               !email.isEmpty,
               !password.isEmpty,
               !firstName.isEmpty,
-            !lastName.isEmpty,
-                password.count >= 6 else{
+              !lastName.isEmpty,
+              password.count >= 6 else{
             alertUserLoginError()
             return
         }
@@ -223,32 +223,51 @@ presentPhotoActionSheet()
             
             guard !exists else{
                 strongSelf.alertUserLoginError(message: "email you'r trying to use already exists")
-
-               //user exists
+                
+                //user exists
                 return
             }
             
-            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion:{authResult, error in
-                
-                
-                guard let result = authResult, error == nil else{
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+                guard  authResult !=  nil, error == nil else{
                     print("error user creation")
                     return
                 }
+                let chatUser = ChatAppUser(firstName: firstName,
+                                           lastName: lastName,
+                                           emailAdress: email)
+                
+                DatabaseManager.shared.insertUser(with: chatUser , completion: { success in
+                    if success {
+                        //upload image
+                        guard let image = strongSelf.imageView.image,
+                              let data = image.pngData() else{
+                            
+                            return
+                        }
+                        let fileName = chatUser.profilePictureFileName
+                        StorageManager.shared.uploadProfilePicture(with: data, 
+                                                                   fileName: fileName,
+                                                                   completion: {result in
+                            switch result {
+                            case .success(let downloadUrl):
+                                UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                print(downloadUrl)
+                            case .failure(_):
+                                print("storage manager error : \(error)")
+                            }
+                            
+                        })
+                    }
                     
-                DatabaseManager.shared.insertUser(with:DatabaseManager.ChatAppUser(firstName: firstName, lastName: lastName, emailAdress: email))
+                })
                 
                 strongSelf.navigationController?.dismiss(animated: true, completion: nil)
                 
-            } )
-            
-            
+            })
         })
-        
-        
-        
-       
     }
+    
     func alertUserLoginError(message : String = "please enter all information to create a new account"){
         let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel , handler : nil))
