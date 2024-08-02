@@ -5,9 +5,18 @@ import FirebaseAuth
 final class DatabaseManager{
     static let shared = DatabaseManager()
     private let database = Database.database().reference()
+    
+    var user1 = FirebaseAuth.Auth.auth().currentUser
+    
+    static func safeEmail(emailAddress: String) -> String {
+        
+        var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with:  "-")
+        return safeEmail
+        
+    }
 }
-   
-var user1 = FirebaseAuth.Auth.auth().currentUser
+
 extension DatabaseManager{
     public func userExists(with email : String, completion : @escaping(Bool) -> Void){
         
@@ -17,7 +26,7 @@ extension DatabaseManager{
         
         database.child(safeEmail).observeSingleEvent(of:.value, with:   {
             snaphot in   guard snaphot.value as? String != nil else {
-            
+                
                 completion(false)
                 
                 return
@@ -28,7 +37,7 @@ extension DatabaseManager{
     }
     
     public func insertUser(with user: ChatAppUser, completion : @escaping(Bool) -> Void){
-        if user1 != nil {
+        if user1 == nil {
             database.child("users").child(user1?.uid ?? "idler").setValue([
                 "email_adress" : user.emailAdress,
                 "first_name" : user.firstName,
@@ -44,7 +53,7 @@ extension DatabaseManager{
         }
     }
     
-    
+}
     struct ChatAppUser {
         let firstName : String
         let lastName : String
@@ -57,8 +66,12 @@ extension DatabaseManager{
             return safeEmail
         }
         // let profilePictureUrl:String
+        var profilePictureFileName:String{
+            //ozan-gmail-com-profile-picture.png
+            return "\(safeEmail)-profile_picture.png"
+        }
     }
-}
+
     
 
     

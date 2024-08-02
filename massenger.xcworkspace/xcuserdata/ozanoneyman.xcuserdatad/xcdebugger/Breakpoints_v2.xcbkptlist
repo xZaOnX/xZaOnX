@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7795E650-2376-44FF-A51B-CCDCA1692691"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5576D1BC-EB3D-4FCA-8C06-A39866AEF99B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "massenger/Controller/Login/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "registerButtonTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5576D1BC-EB3D-4FCA-8C06-A39866AEF99B - 25ed38444943ba20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in massenger.RegisterViewController.registerButtonTapped() -&gt; ()"
+                  moduleName = "massenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozanoneyman/Desktop/massenger/massenger/Controller/Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240">
+               </Location>
+               <Location
+                  uuid = "5576D1BC-EB3D-4FCA-8C06-A39866AEF99B - 5738a5ad36330e0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #2 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in massenger.RegisterViewController.registerButtonTapped() -&gt; ()"
+                  moduleName = "massenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozanoneyman/Desktop/massenger/massenger/Controller/Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
